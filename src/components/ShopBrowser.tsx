@@ -15,7 +15,7 @@ export function ShopBrowser({
 }) {
   const [selectedGenre, setSelectedGenre] = useState("All");
   const [selectedFormats, setSelectedFormats] = useState<Format[]>([]);
-  const [sortMode, setSortMode] = useState<SortMode>("band");
+  const [sortMode, setSortMode] = useState<SortMode>("newest");
   const [selectedRelease, setSelectedRelease] = useState<Release | null>(null);
 
   function toggleFormat(format: Format) {

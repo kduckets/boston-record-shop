@@ -204,6 +204,30 @@ export const records: Release[] = [
     blurb:
       "A Boston instrumental trio building long, heavy, riff-driven arcs out of post-metal and post-rock with no verse-chorus safety net.",
   },
+  {
+    id: "courtney-swain-growing-pains",
+    band: "Courtney Swain",
+    album: "Growing Pains",
+    year: 2017,
+    genre: "Electropop",
+    formats: ["cd"],
+    coverUrl: "https://f4.bcbits.com/img/a0656231676_10.jpg",
+    bandcampUrl: "https://courtneyswain.bandcamp.com/album/growing-pains",
+    blurb:
+      "The Bent Knee frontwoman's solo debut — dreamy electropop and virtuosic keyboard work that stands entirely apart from the band.",
+  },
+  {
+    id: "converge-love-is-not-enough",
+    band: "Converge",
+    album: "Love Is Not Enough",
+    year: 2026,
+    genre: "Metalcore",
+    formats: ["vinyl", "cd"],
+    coverUrl: "https://f4.bcbits.com/img/a1291330267_10.jpg",
+    bandcampUrl: "https://convergecult.bandcamp.com/album/love-is-not-enough",
+    blurb:
+      "Boston hardcore royalty — the band that helped invent metalcore, still hitting as hard as ever decades in.",
+  },
 ];
 
 export const genres = Array.from(new Set(records.map((r) => r.genre))).sort();

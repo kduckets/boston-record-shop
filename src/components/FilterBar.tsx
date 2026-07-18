@@ -94,9 +94,9 @@ export function FilterBar({
             onChange={(e) => onSortChange(e.target.value as SortMode)}
             className="rounded-sm border border-ink/25 bg-paper px-2 py-1.5 font-stamp text-xs uppercase tracking-wide text-ink"
           >
-            <option value="band">Band A–Z</option>
             <option value="newest">Newest First</option>
             <option value="oldest">Oldest First</option>
+            <option value="band">Band A–Z</option>
           </select>
         </div>
 
