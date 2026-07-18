@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+
+  --paper: #efe4cd;
+  --paper-dark: #e4d5b5;
+  --ink: #2a1f14;
+  --ink-soft: #5a4a37;
+  --oxblood: #7a2622;
+  --oxblood-dark: #5c1c19;
+  --mustard: #c8912f;
+  --mustard-dark: #a5741f;
+  --teal: #2f5f5a;
+  --crate-wood: #6b4a30;
+  --crate-wood-dark: #4d3420;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-paper: var(--paper);
+  --color-paper-dark: var(--paper-dark);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-oxblood: var(--oxblood);
+  --color-oxblood-dark: var(--oxblood-dark);
+  --color-mustard: var(--mustard);
+  --color-mustard-dark: var(--mustard-dark);
+  --color-teal: var(--teal);
+  --color-crate-wood: var(--crate-wood);
+  --color-crate-wood-dark: var(--crate-wood-dark);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--paper);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(
+      ellipse at top left,
+      rgba(255, 255, 255, 0.35),
+      transparent 55%
+    ),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/></svg>");
+  color: var(--ink);
+  font-family: var(--font-body), Georgia, serif;
+}
+
+::selection {
+  background: var(--mustard);
+  color: var(--ink);
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.font-stamp {
+  font-family: var(--font-stamp), monospace;
+}
+
+.font-logo {
+  font-family: var(--font-logo), Georgia, serif;
+}
+
+.font-tab {
+  font-family: var(--font-body), ui-sans-serif, sans-serif;
+  font-weight: 600;
+}
+
+.crate-tab {
+  clip-path: polygon(6% 0, 94% 0, 100% 100%, 0 100%);
+}
+
+.record-cover-shadow {
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.15),
+    0 10px 20px -8px rgba(42, 31, 20, 0.45);
 }
