@@ -26,10 +26,60 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://bostonwax.com";
+
 export const metadata: Metadata = {
-  title: "Boston Wax — Local Record Shop",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Boston Wax — A Record Shop for Local Boston Bands",
+    template: "%s | Boston Wax",
+  },
   description:
-    "A record shop for Boston bands only. Vinyl, CDs, and cassettes from the artists actually playing your city — link straight through to buy on Bandcamp.",
+    "Boston Wax is a record shop for local Boston bands only. Browse vinyl, CDs, and cassettes from Boston-area artists across the local music scene — including Somerville and Cambridge — and buy straight from each band's own Bandcamp store.",
+  keywords: [
+    "Boston bands",
+    "Boston music",
+    "local bands Boston",
+    "Boston record shop",
+    "Boston vinyl",
+    "Boston music scene",
+    "Boston Massachusetts bands",
+    "Somerville bands",
+    "Cambridge bands",
+    "Boston DIY music",
+    "Bandcamp Boston",
+    "buy vinyl Boston",
+  ],
+  authors: [{ name: "Boston Wax" }],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: "Boston Wax",
+    title: "Boston Wax — A Record Shop for Local Boston Bands",
+    description:
+      "A record shop for local Boston bands only. Vinyl, CDs, and cassettes from the artists actually playing your city — link straight through to buy on Bandcamp.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Boston Wax — A Record Shop for Local Boston Bands",
+    description:
+      "A record shop for local Boston bands only. Vinyl, CDs, and cassettes from the artists actually playing your city.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({
